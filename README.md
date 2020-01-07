@@ -41,3 +41,7 @@ Change Date: 2020-01-01 (MaxScale 2.2), 2021-09-01 (MaxScale 2.4.2). For MaxScal
 Before that in BSL 1.1 and 1.0 (from MaxScale 2.0 on), may be used without License Coss
 with LESS than 3 Servers 
 ```
+
+## slow query log 
+
+https://mariadb.com/kb/en/slow-query-log-overview/
