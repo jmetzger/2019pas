@@ -11,3 +11,8 @@ systemctl status mariadb -l -n 50
 
 ## Galera status variables 
 https://galeracluster.com/library/documentation/galera-status-variables.html#wsrep-apply-oooe
+
+## Block firewall to simulate non-primary (drop out of cluster) 
+```
+for i in 3306 4567 4568 4444; do iptables -A INPUT -p tcp --destination-port $i -j DROP; iptables -A OUTPUT -p tcp --destination-port $i -j DROP; done
+```
