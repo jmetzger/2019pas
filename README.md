@@ -23,4 +23,7 @@ mysqlbinlog -vv noerd2-bin.000002
 
 ## pit - prep 
 mysqldump --all-databases -uroot -p --master-data=2 --delete-master-logs > /usr/src/all.sql
-# take the other part from binlog 
+mysqlbinlog noerd2-bin.000003 > /usr/src/recover.sql
+# now recover
+mysql -uroot -p < /usr/src/all.sql 
+mysql -uroot -p < /usr/src/recover.sql 
