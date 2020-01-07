@@ -16,3 +16,8 @@ https://galeracluster.com/library/documentation/galera-status-variables.html#wsr
 ```
 for i in 3306 4567 4568 4444; do iptables -A INPUT -p tcp --destination-port $i -j DROP; iptables -A OUTPUT -p tcp --destination-port $i -j DROP; done
 ```
+
+## Show row-based data in real from binlog
+## if e.g. your executed an insert or update 
+mysqlbinlog -vv noerd2-bin.000002
+
