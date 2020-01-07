@@ -21,3 +21,6 @@ for i in 3306 4567 4568 4444; do iptables -A INPUT -p tcp --destination-port $i 
 ## if e.g. your executed an insert or update 
 mysqlbinlog -vv noerd2-bin.000002
 
+## pit - prep 
+mysqldump --all-databases -uroot -p --master-data=2 --delete-master-logs > /usr/src/all.sql
+# take the other part from binlog 
